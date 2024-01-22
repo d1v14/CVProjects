@@ -15,4 +15,4 @@ python3 tracking.py /***Путь к вашему видео***
 
 * На первом кадре выбрать интересующую область, подтвердить выбор в всплывающем окне
 
-<img src="pictures/track.gif" width="500" height="500"/>
+<img src="pictures/track.gif" width="200" height="500"/>
