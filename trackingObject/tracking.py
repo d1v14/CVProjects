@@ -4,7 +4,7 @@ import tkinter as toolkit
 from PIL import Image, ImageTk
 
 class Tracker():
-    def __init__(self,margin = 50,method = cv2.TM_CCORR_NORMED):
+    def __init__(self,margin = 30,method = cv2.TM_CCORR_NORMED):
         self.method = method
         self.margin = margin
         self.leftPoint = None
@@ -108,7 +108,7 @@ class selector():
 
 
 
-def main(source):
+def main(source = 0 ):
   
     capture = cv2.VideoCapture(source)
     value , frame = capture.read()
@@ -137,6 +137,6 @@ def main(source):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Tracking Object from video")
-    parser.add_argument("source",help="path to videofile")
+    parser.add_argument("--source",default=0,help="path to videofile")
     args = parser.parse_args()
     main(args.source)
