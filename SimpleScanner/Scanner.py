@@ -3,7 +3,6 @@ import cv2
 import imutils
 import matplotlib 
 import numpy as np
-from skimage.filters import threshold_local
 from matplotlib import pyplot as plt
 
 plt.figure(figsize = (20,18))

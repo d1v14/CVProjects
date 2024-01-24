@@ -16,7 +16,7 @@ tempWidth, tempHeight = temp.shape[0:2]
 methods = ['cv2.TM_CCOEFF', 'cv2.TM_CCOEFF_NORMED', 'cv2.TM_CCORR',
            'cv2.TM_CCORR_NORMED', 'cv2.TM_SQDIFF', 'cv2.TM_SQDIFF_NORMED']
 
-
+plt.figure(figsize=(20, 18))
 
 for idx, meth in enumerate(methods, 1):
     img2 = img.copy()
