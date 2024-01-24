@@ -20,7 +20,7 @@ def main(source):
     # Переводим изображение в оттенки серого
     copyGray = cv2.cvtColor(copy,cv2.COLOR_BGR2GRAY)
     # Размываем изображение для более успешного поиска контуров
-    copyGray = cv2.GaussianBlur(copyGray,(7,7),0)
+    copyGray = cv2.GaussianBlur(copyGray,(11,11),3)
     # Выделяем углы
     edged = cv2.Canny(copyGray,75,200)
     # Выполняем поиск контуров
@@ -66,9 +66,9 @@ def main(source):
     
     dst = np.array([
         [0,0],
-        [width-1,0],
-        [width-1,height-1],
-        [0,height-1]
+        [width,0],
+        [width,height],
+        [0,height]
     ],
         dtype="float32")
     # Вычисляем матрицу поворота для перевода контуров из состояния на фото в вертикальное состояние
